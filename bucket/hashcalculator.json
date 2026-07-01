@@ -1,0 +1,23 @@
+{
+    "version": "6.2.1",
+    "description": "一个文件哈希值计算小工具.",
+    "homepage": "https://github.com/hrpzcf/HashCalculator",
+    "license": "GPL-3.0-or-later",
+    "url": "https://github.com/hrpzcf/HashCalculator/releases/download/6.2.1/HashCalculator-6.2.1.zip",
+    "hash": "sha256:e7c8ad11810620e18b514e07ad02f4ec26b9f587f1b03fedd5a9626a67af1992",
+    "bin": "HashCalculator.exe",
+    "shortcuts": [
+        [
+            "HashCalculator.exe",
+            "HashCalculator"
+        ]
+    ],
+    "persist": "Config",
+    "checkver": {
+        "url": "https://github.com/hrpzcf/HashCalculator/releases/latest",
+        "regex": "/releases/tag/([\\d.]+)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/hrpzcf/HashCalculator/releases/download/$version/HashCalculator-$version.zip"
+    }
+}
