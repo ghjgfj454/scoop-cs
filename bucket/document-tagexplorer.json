@@ -1,0 +1,14 @@
+{
+    "version": "7.5.0.0",
+    "description": "Document TagExplorer 文件标签分类管理工具 绿色版",
+    "homepage": "https://www.ghxi.com/wx20211228.html",
+    "license": "Freeware",
+    "url": "file:///C:/Users/Annalist/Downloads/Document_TagExplorer_7.5_Green.7z",
+    "hash": "491464E1C94D12E440B58E04C5FE10ED337E8F0BA351F45F2AE06C8FEE1EC0B1",
+    "extract_dir": "Document_TagExplorer",
+    "bin": "Document_TagExplorer_2026_v7.5.exe",
+    "shortcuts": [
+        ["Document_TagExplorer_2026_v7.5.exe", "Document TagExplorer"],
+        ["Quick_TagViewer_V1.17.3.exe", "Quick TagViewer"]
+    ]
+}
