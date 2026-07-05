@@ -1,0 +1,34 @@
+{
+    "version": "1.1.3.4663",
+    "description": "PDF补丁丁（PDFPatcher）——开源、免费、功能强大的PDF处理工具",
+    "homepage": "https://github.com/wmjordan/PDFPatcher",
+    "license": {
+        "identifier": "AGPL-3.0",
+        "url": "https://github.com/wmjordan/PDFPatcher/blob/master/LICENSE"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wmjordan/PDFPatcher/releases/download/v1.1.3.4663/PDFPatcher-1.1.3.4663.7z",
+            "hash": "8121f41b3f0426100a9c71b5c9b6a0e9a12374d96bcecf05d77a325c82f70f03"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$persist_dir\\Settings\")) { New-Item -Path \"$persist_dir\\Settings\" -ItemType Directory -Force | Out-Null }"
+    ],
+    "persist": "Settings",
+    "bin": "PDFPatcher.exe",
+    "shortcuts": [
+        [
+            "PDFPatcher.exe",
+            "PDF 补丁丁"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/wmjordan/PDFPatcher/releases/download/v$version/PDFPatcher-$version.7z"
+            }
+        }
+    }
+}
