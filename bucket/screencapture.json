@@ -1,0 +1,26 @@
+{
+    "version": "2.4.17",
+    "description": "ScreenCapture是款免费开源截图工具，支持跨屏截图、高亮窗口、颜色取样及丰富绘图功能。轻量级、快速、低资源占用，易于集成。特色包括撤销重做、钉住截图、多语言支持。软件小巧（3.8M），无需安装，支持快捷键操作。",
+    "homepage": "https://github.com/xland/ScreenCapture",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/xland/ScreenCapture/releases/download/2.4.17/ScreenCapture.exe",
+            "hash": "d9f00abc857cbeb3965841ba87a1505f8921c3203125b43cebf45ba1b97064dd"
+        }
+    },
+    "bin": "ScreenCapture.exe",
+    "shortcuts": [
+        ["ScreenCapture.exe", "ScreenCapture 截图工具"]
+    ],
+    "checkver": {
+        "github": "https://github.com/xland/ScreenCapture"
+    },
+    "autoupdate": {
+        "url": "https://github.com/xland/ScreenCapture/releases/download/$version/ScreenCapture.exe",
+        "hash":{
+            "url": "https://api.github.com/repos/xland/ScreenCapture/releases/tags/$version",
+            "jsonpath": "$.assets[?(@.name == 'ScreenCapture.exe')].digest"
+        }
+    }
+}
