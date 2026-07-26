@@ -1,6 +1,6 @@
 {
     "version": "1.7.2",
-    "description": "Context Menu Manager Plus. 管理 Windows 右键菜单，拦截并审核第三方添加的菜单项。",
+    "description": "Context Menu Manager Plus. Manage Windows context menu and audit third-party menu items.",
     "homepage": "https://github.com/PLFJY/ContextMenuMgr",
     "license": "GPL-3.0",
     "changelog": "https://github.com/PLFJY/ContextMenuMgr/releases",
@@ -18,15 +18,11 @@
             "hash": "a998cb4a76ddd6a759e3e07665d727df1afb7c905aeb4a7fd0437001fd994e63"
         }
     },
+    "bin": "ContextMenuManagerPlus.exe",
     "shortcuts": [
-        ["ContextMenuManagerPlus.exe", "Context Menu Manager Plus"]
+        ["ContextMenuManagerPlus.exe", "Context Menu Manager Plus", "ContextMenuManagerPlus.exe"]
     ],
-    "bin": [
-        ["ContextMenuManagerPlus.exe", "context-menu-manager-plus"]
-    ],
-    "persist": [
-        "Data"
-    ],
+    "persist": "Data",
     "checkver": {
         "url": "https://api.github.com/repos/PLFJY/ContextMenuMgr/releases/latest",
         "jsonpath": "$.tag_name",
@@ -35,13 +31,25 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-x64-self-contained-portable.zip"
+                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-x64-self-contained-portable.zip",
+                "hash": {
+                    "url": "https://github.com/PLFJY/ContextMenuMgr/releases/tag/v$version",
+                    "find": "ContextMenuMgrPlus-$version-x64-self-contained-portable.zip.*?sha256:([a-fA-F0-9]{64})"
+                }
             },
             "32bit": {
-                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-x86-self-contained-portable.zip"
+                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-x86-self-contained-portable.zip",
+                "hash": {
+                    "url": "https://github.com/PLFJY/ContextMenuMgr/releases/tag/v$version",
+                    "find": "ContextMenuMgrPlus-$version-x86-self-contained-portable.zip.*?sha256:([a-fA-F0-9]{64})"
+                }
             },
             "arm64": {
-                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-arm64-self-contained-portable.zip"
+                "url": "https://github.com/PLFJY/ContextMenuMgr/releases/download/v$version/ContextMenuMgrPlus-$version-arm64-self-contained-portable.zip",
+                "hash": {
+                    "url": "https://github.com/PLFJY/ContextMenuMgr/releases/tag/v$version",
+                    "find": "ContextMenuMgrPlus-$version-arm64-self-contained-portable.zip.*?sha256:([a-fA-F0-9]{64})"
+                }
             }
         }
     }
