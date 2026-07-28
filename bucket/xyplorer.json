@@ -1,0 +1,31 @@
+{
+  "version": "28.30.1600",
+  "description": "XYplorer 便携版文件管理器",
+  "homepage": "https://www.xyplorer.com/index.php",
+  "license": {
+    "identifier": "Proprietary",
+    "url": "https://www.xyplorer.com/purchase.php"
+  },
+  "architecture": {
+    "64bit": {
+      "url": "https://www.xyplorer.com/download/xyplorer64_28.30.1600_noinstall.zip",
+      "hash": "954fd84c7944a6306a80c3fb8a8f2f460882a63a2548ce52c2e1e66f1518b183"
+    }
+  },
+  "bin": "XYplorer.exe",
+  "shortcuts": [
+    ["XYplorer.exe", "XYplorer"]
+  ],
+  "persist": "Data",
+  "checkver": {
+    "url": "https://www.xyplorer.com",
+    "regex": "version.+?(([\\d.]+){3,})"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://www.xyplorer.com/download/xyplorer64_$version_noinstall.zip"
+      }
+    }
+  }
+}
