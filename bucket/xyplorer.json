@@ -4,12 +4,11 @@
   "homepage": "https://www.xyplorer.com/index.php",
   "license": {
     "identifier": "Proprietary",
-    "url": "https://www.xyplorer.com/purchase.php"
+    "url": "https://www.xyplorer.com/LicenseXY.txt"
   },
   "architecture": {
     "64bit": {
-      "url": "https://www.xyplorer.com/download/xyplorer64_28.30.1600_noinstall.zip",
-      "hash": "954fd84c7944a6306a80c3fb8a8f2f460882a63a2548ce52c2e1e66f1518b183"
+      "url": "https://www.xyplorer.com/download/xyplorer64_full_noinstall.rar"
     }
   },
   "bin": "XYplorer.exe",
@@ -24,7 +23,7 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://www.xyplorer.com/download/xyplorer64_$version_noinstall.zip"
+        "url": "https://www.xyplorer.com/download/xyplorer64_full_noinstall.rar"
       }
     }
   }
